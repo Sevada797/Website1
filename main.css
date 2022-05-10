@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+html {height: 100%}
+body {
+margin: 0px;
+background-image: url('bckg.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+div.navbar {
+display: flex;
+justify-content: center;
+margin-top: 15px
+}
+.navbarlnk {
+color: white;
+text-decoration: none;
+font-size: 20px;
+font-weight: 100;
+padding-left: 5px;
+border-left: 3px solid rgba(255, 255, 255, 0);
+}
+.link1{
+margin-right: 60px
+}
+.link2 {
+margin-right: 400px
+}
+.link3 {
+margin-left: 400px;
+}
+.link4 {
+margin-left: 60px    
+}
+.lnkcenter {
+font-weight: bold;
+font-size: 25px;
+}
+.navbarlnk:hover {
+transition: 0.2s;
+color: rgb(59, 59, 59);
+border-left: 3px solid white;
+}
+.srch-icon {
+height: 20px;
+cursor: pointer;
+margin-left: 30px
+}
+hr.hr1 {
+margin-top: 10px;
+width: 1320px;
+border: solid rgb(224, 224, 224) 1px
+
+}
+div.center {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 130px
+}
+.img1 {
+    opacity: 0;
+    height: 400px;
+    margin-left: 50px;
+    animation: img 0.8s  forwards 1s;
+}
+.column1 {
+display: flex;
+flex-direction: column;
+
+}
+.biger {
+    opacity: 0;
+color: white;
+font-size: 80px;
+font-family: 'Source Sans Pro', sans-serif;
+margin-bottom: 0px;
+animation: bigtext 1.5s forwards 0.1s;
+}
+.sample {
+opacity: 0;
+color: #d6d5d5;
+font-size: 30px;
+animation: smalltext 1s forwards 0.5s;
+}
+.sample:hover {
+text-decoration: underline;
+text-decoration-thickness: 1px;
+}
+.bottom {
+background-color: #4f5758;
+border-top-left-radius: 40px;
+border-top-right-radius: 40px;
+height: 200px;
+width: 1500px;
+}
+.layn {
+width: 100%;
+display: flex;
+justify-content: center;
+margin-top: 153px
+
+}
+.bottomtext1 {
+color: white;
+font-size: 20px;
+font-weight: bold;
+margin-left: 60px;
+margin-top: 30px
+}
+.btm1 {
+width: 360px;
+margin-left: 60px;
+border: solid 1.5px #cacace;
+border-top-left-radius: 16px;
+border-bottom-left-radius: 16px;
+display: flex;
+flex-direction: column;
+height: 40px;
+color: white;
+font-size: 20px
+}
+.fl {
+display: flex
+}
+.same {
+background-color:rgb(93, 92, 92);
+padding: 9px 28px;
+cursor: default
+}
+.nsame {
+background-color: transparent;
+padding: 9px 28px;
+cursor: default;
+
+}
+#panel {
+visibility: hidden
+}
+.svg1 {
+height: 20px;
+float: right
+}
+.srch-button {
+padding: 12px 28px;
+background-color: #91CB82;
+font-size: 20px;
+border-radius: 8px;
+border: none;
+color: white;
+margin-left: 700px;
+}
+.srch-button:hover {
+background-color: #79a56e;
+cursor: pointer
+}
+
+
+@keyframes forsvg2 {
+from {transform: rotate(0deg)}
+to {transform: rotate(180deg)}
+
+}
+@keyframes forsvg1 {
+    from {transform: rotate(180deg);}
+    to {transform: rotate(0deg);}  
+}
+@keyframes bigtext{
+from {opacity: 0; transform: translateY(-30px)}
+to {opacity: 1; transform: translateY(0px)}
+}
+@keyframes smalltext {
+    from {opacity: 0; transform: translateX(-100px)}
+    to {opacity: 1; transform: translateX(0px)}
+}
+@keyframes img {
+from {opacity: 0; transform: translateY(40px)}
+to {opacity: 1; transform: translateY(0px)}
+
+}
+/*@keyframes visible {
+from {opacity: 0;}
+to {opacity: 1}
+}
+@keyframes hidden {
+    from {opacity: 1;}
+    to {opacity: 0}
+}*/

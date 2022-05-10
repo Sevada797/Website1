@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Project1</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="navbar">
+<a href="" class="navbarlnk link1">About</a>
+<a href="" class="navbarlnk link2">Contact</a>
+<a href="" class="navbarlnk lnkcenter">Camping.</a>
+<a href="" class="navbarlnk link3">Sign in</a>
+<a href="" class="navbarlnk link4">Sign up</a>
+<img id="srchsvg" class="srch-icon" src="search-solid 1srch.png" onmouseover="change()" onmouseout="change2()">
+</div>
+<hr class="hr1">
+<div class="center">
+    <div class="column1">
+    <p class="biger">Beautiful Places<br>of England</p>
+    <p class="sample">Plan your vacation on the most beutiful<br> places of England</p>
+</div>
+    <img src="Component1.png" class="img1">
+</div>
+<div class="layn">
+<div class="bottom">
+    <p class="bottomtext1">Book your vacation</p>
+    <div class="fl">
+<div class="btm1" onfocusout="disappear()">
+    <div class="nsame" id="opt1">Luna Land North Rhiannonmounth<img src="down-arrow.svg" class="svg1" id="svgjs"></div><div id="panel">
+    <div class="same" onmouseenter="color1(0)" onmouseleave="color2(0)" id="opt2">St. Ives, Cornwall</div>
+    <div class="same" onmouseenter="color1(1)" onmouseleave="color2(1)" id="opt3">Alfriston, East Sussex</div></div>
+        </div>
+        <div class="btm2"></div>
+        <div class="btm3"></div>
+        <div class="btm4"><button class="srch-button">Search</button></div>
+ </div>
+</div>
+</div>
+<script>
+document.getElementById("panel").style.visibility = "hidden";
+var Options = document.getElementsByClassName("same");
+function color1(num) {
+Options[num].style.backgroundColor = "rgb(59, 58, 58)";
+}
+function color2(num) {
+Options[num].style.backgroundColor = "rgb(93, 92, 92)";
+}
+function change() {
+document.getElementById("srchsvg").src = "search-solid 1srch (1).png";
+}
+function change2() {document.getElementById("srchsvg").src = "search-solid 1srch.png";}
+var option1 = document.getElementById("opt1");
+option1.addEventListener("click", appear);
+function appear() {
+    if (document.getElementById("panel").style.visibility == "hidden") {
+document.getElementById("panel").style.visibility = "visible";
+document.getElementById("svgjs").style.animation = "forsvg2 1s forwards";
+}
+ else {
+    document.getElementById("panel").style.visibility = "hidden";
+    document.getElementById("svgjs").style.animation = "forsvg1 0.5s forwards";
+    }
+}
+var option2 = Options[0];
+var option3 = Options[1];
+option2.addEventListener("click", ()=>{let k = option2.innerText; option2.innerText = option1.innerText; option1.innerHTML = k + "<img src=\"down-arrow.svg\" class=\"svg1\" style=\"transform: rotate(180deg)\" id=\"svgjs\">";})
+option3.addEventListener("click", ()=>{let k = option3.innerText; option3.innerText = option1.innerText; option1.innerHTML = k + "<img src=\"down-arrow.svg\" class=\"svg1\" style=\"transform: rotate(180deg)\" id=\"svgjs\">";})
+/*function disappear() {
+if (document.getElementById("panel").style.visibility == "hidden") {
+document.getElementById("panel").style.visibility = "hidden";
+}
+}*/
+//document.body.addEventListener("click", disappear)
+</script>
+</body>
